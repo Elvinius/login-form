@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login details</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+ 
+	<div id="container" class="form-container form-handling">
+		<?php
+ 
+		if(!empty($_GET["remember"])) {
+			setcookie ("username",$_GET["username"],time()+ 3600);
+			setcookie ("password",$_GET["password"],time()+ 3600);
+			echo "<p>Welcome to the website. Your details are as follows: </p> <br> 
+			Username: " . $_GET["username"] . " <br>
+			Age: " . $_GET["age"] . " <br>  
+			Country: " . $_GET["country"];
+		} else {
+			setcookie("username","");
+			setcookie("password","");
+			echo "<p>Welcome to the website. Your details are as follows: </p> <br> 
+			Username: " . $_GET["username"] . " <br>
+			Age: " . $_GET["age"] . " <br>  
+			Country: " . $_GET["country"] ;
+		}
+		?>
+ 
+	<p><a href="index.php"> Go to Login page </a></p>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web application form</title>
+  <meta charset="utf-8">
+  <meta lang="EN">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+	
+</head>
+<body>
+  <div id="container">
+    <form method="GET" action="form_handling.html">
+     <p>Use the following form to sign up</p>
+     <input type="text" name="username" placeholder="Username" value="">
+     <input type="password" name="password" placeholder="Password" required pattern=".{7,}" title="Seven or more characters" value="">
+      <input type="submit" class="btn" value="Login">
+    </form>
+  </div>
+
+</body>
+</html>
